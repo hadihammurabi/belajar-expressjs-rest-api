@@ -15,4 +15,14 @@ route.post('/register', async (req, res) => {
   }
 });
 
+route.post('/login', async (req, res) => {
+  try {
+    const token = await AuthService.loginBearer(req.body);
+    res.json({token, type: 'Bearer'});
+  } catch (error) {
+    console.log({error});
+    res.status(400).json({ error: error.errors});
+  }
+});
+
 module.exports = route;
