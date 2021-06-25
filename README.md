@@ -10,6 +10,7 @@ Belajar REST API service dengan ExpressJS
   * [User Registration](#user-registration)
   * [User Login](#user-login)
   * [User Profile](#user-profile)
+* [CHANGELOG - How This Project Was Built](./CHANGELOG.md)
 
 # Installation
 ## Prerequisites
