@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const root = require('./root');
 const auth = require('./auth');
 
 const delivery = (config) => ({
   config,
   app: express(),
   createRoute: function() {
+    this.app.use('/', root);
     this.app.use('/auth', auth);
     return this;
   },
